@@ -674,30 +674,33 @@
               minlength="5"
             ></textarea>
           </div>
-          <label class="modal-form-agreement" for="user_agreement">
+          <div class="form-wrapper">
+            <label class="modal-form-agreement" for="user-privacy">
+              <span class="modal-form-description"
+                >I accept the terms and conditions of the
+                <a
+                  class="modal-form-link"
+                  href=""
+                  target="_blank"
+                  rel="noopener no-referrer"
+                  >Privacy Policy</a
+                ></span
+              ></label
+            >
             <input
               class="checkbox"
               type="checkbox"
-              name="user_agreement"
+              name="user-privacy"
               value="yes"
-              id="user_agreement"
+              id="user-privacy"
+              value="true"
             />
             <span class="agreement-checkbox">
               <svg class="agreement-checkbox-icon" width="10" height="8">
                 <use href="./images/icons.svg#icon-check-2"></use>
               </svg>
             </span>
-            <span class="modal-form-description"
-              >I accept the terms and conditions of the
-              <a
-                class="modal-form-link"
-                href=""
-                target="_blank"
-                rel="noopener no-referrer"
-                >Privacy Policy</a
-              ></span
-            >
-          </label>
+          </div>
           <button class="hero-section-btn" type="submit">Send</button>
         </form>
       </div>

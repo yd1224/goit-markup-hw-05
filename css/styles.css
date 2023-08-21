@@ -806,10 +806,11 @@ img {
   padding: 8px 16px;
   font-size: 12px;
   line-height: 1.17;
-
+  color: rgba(46, 47, 66, 0.4);
   letter-spacing: 0.04em;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: transparent;
+  background-color: transparent;
 }
 .modal-form-comment::placeholder {
   color: var(--navyblue-modal);
@@ -821,27 +822,29 @@ img {
   letter-spacing: 0.04em;
 
   color: var(--light-slate);
+  display: block;
 }
 .agreement-checkbox-icon {
-  fill: currentColor;
 }
 .agreement-checkbox {
-  display: flex;
+  display: inline-flex;
+  fill: transparent;
   align-items: center;
   justify-content: center;
   width: 16px;
   height: 16px;
   border-width: 1px;
-  border-color: var(--navyblue-modal);
-  color: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 input[type='checkbox']:checked + .agreement-checkbox {
   background-color: var(--ocean);
   border-color: var(--ocean);
-  color: var(--footer-light);
+  fill: #f4f4fd;
 }
 .checkbox {
 }
