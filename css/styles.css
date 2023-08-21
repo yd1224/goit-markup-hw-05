@@ -885,7 +885,7 @@ input[type='checkbox']:checked + .agreement-checkbox {
 
   font-weight: 400;
   font-size: 12px;
-  line-height: 2;
+  line-height: 1.5;
 
   letter-spacing: 0.04em;
 
@@ -913,13 +913,16 @@ input[type='checkbox']:checked + .agreement-checkbox {
   border: none;
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
+
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
   gap: 16px;
+  min-width: 165px;
+  height: 40px;
+  display: flex;
 
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
 
   font-weight: 500;
   font-size: 16px;
