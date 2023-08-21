@@ -846,8 +846,8 @@ img {
 }
 input[type='checkbox']:checked + .agreement-checkbox {
   background-color: var(--ocean);
-  border-color: var(--ocean);
-  fill: #f4f4fd;
+  border: none;
+  fill: var(--footer-light);
 }
 .checkbox {
 }
