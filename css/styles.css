@@ -83,7 +83,18 @@ img {
 .card-set-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /**
   |============================
   | Studio
@@ -738,9 +749,27 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 38px;
 }
+.modal-form-input::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.04em;
+  color: var(--navyblue-modal);
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus::placeholder {
+  opacity: 1;
+}
 .modal-form-input:focus,
 .modal-form-comment:focus {
   border-color: var(--brand-color);
+}
+.modal-form-input:not(:placeholder-shown):invalid:required {
+  border-color: #e74a3b;
+}
+.modal-form-input:not(:placeholder-shown):valid:required {
+  border-color: #07bf7c;
 }
 .modal-form-icon {
   position: absolute;
@@ -749,6 +778,16 @@ img {
   left: 0;
   fill: var(--navyblue);
   pointer-events: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--brand-color);
+}
+.modal-form-input:not(:placeholder-shown):invalid:required + .modal-form-icon {
+  fill: #e74a3b;
+}
+.modal-form-input:not(:placeholder-shown):valid:required + .modal-form-icon {
+  fill: #07bf7c;
 }
 .modal-form-comment {
   border-radius: 4px;
@@ -775,6 +814,27 @@ img {
   letter-spacing: 0.04em;
 
   color: var(--light-slate);
+}
+.agreement-checkbox-icon {
+  fill: currentColor;
+}
+.agreement-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-width: 1px;
+  border-color: var(--navyblue-modal);
+  color: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+input[type='checkbox']:checked + .agreement-checkbox {
+  background-color: var(--ocean);
+  border-color: var(--ocean);
+  color: var(--footer-light);
 }
 .checkbox {
 }
@@ -820,7 +880,6 @@ img {
   padding: 8px 16px;
   background-color: transparent;
   outline: transparent;
-  /* E-mail */
 
   font-family: 'Roboto';
 
