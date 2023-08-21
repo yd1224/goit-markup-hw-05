@@ -917,7 +917,6 @@ input[type='checkbox']:checked + .agreement-checkbox {
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   min-width: 165px;
   height: 40px;
   display: flex;
@@ -936,4 +935,5 @@ input[type='checkbox']:checked + .agreement-checkbox {
   background-color: var(--pressed-state);
 }
 .plane {
+  margin-left: 16px;
 }
