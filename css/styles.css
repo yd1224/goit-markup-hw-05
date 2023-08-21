@@ -818,10 +818,10 @@ img {
 .modal-form-agreement {
   font-size: 12px;
   line-height: 1.17;
-
+  margin-bottom: 24px;
   letter-spacing: 0.04em;
 
-  color: var(--light-slate);
+  color: #8e8f99;
   display: block;
 }
 .agreement-checkbox-icon {
