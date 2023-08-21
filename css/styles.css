@@ -723,6 +723,9 @@ img {
 }
 .modal-form {
 }
+.form-wrapper {
+  margin-bottom: 8px;
+}
 .modal-form-label {
   display: block;
   margin-bottom: 4px;
