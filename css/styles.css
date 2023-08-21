@@ -815,10 +815,13 @@ img {
 .modal-form-comment::placeholder {
   color: var(--navyblue-modal);
 }
+.checkbox-wrapper {
+  margin-bottom: 24px;
+}
 .modal-form-agreement {
   font-size: 12px;
   line-height: 1.17;
-  margin-bottom: 24px;
+
   letter-spacing: 0.04em;
 
   color: #8e8f99;
