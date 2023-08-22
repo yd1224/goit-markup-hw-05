@@ -828,10 +828,11 @@ img {
   display: block;
 }
 .agreement-checkbox-icon {
+  fill: currentColor;
 }
 .agreement-checkbox {
   display: inline-flex;
-  fill: transparent;
+  color: transparent;
   align-items: center;
   justify-content: center;
   width: 16px;
@@ -839,15 +840,15 @@ img {
   border-width: 1px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-
+  background-color: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-input[type='checkbox']:checked + .modal-form-agreement + .agreement-checkbox {
+input[type='checkbox']:checked ~ .agreement-checkbox {
   background-color: var(--ocean);
   border: none;
-  fill: var(--footer-light);
+  color: var(--footer-light);
 }
 .checkbox {
 }
