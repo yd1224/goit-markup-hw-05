@@ -828,11 +828,10 @@ img {
   display: block;
 }
 .agreement-checkbox-icon {
-  fill: currentColor;
 }
 .agreement-checkbox {
   display: inline-flex;
-  color: transparent;
+  fill: transparent;
   align-items: center;
   justify-content: center;
   width: 16px;
@@ -845,10 +844,10 @@ img {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-input[type='checkbox']:checked ~ .agreement-checkbox {
+input[type='checkbox']:checked + .modal-form-agreement > .agreement-checkbox {
   background-color: var(--ocean);
   border: none;
-  color: var(--footer-light);
+  fill: var(--footer-light);
 }
 .checkbox {
 }
