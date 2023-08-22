@@ -816,7 +816,6 @@ img {
   color: var(--navyblue-modal);
 }
 .checkbox-wrapper {
-  margin-bottom: 24px;
 }
 .modal-form-agreement {
   font-size: 12px;
@@ -826,6 +825,7 @@ img {
 
   color: #8e8f99;
   display: block;
+  user-select: none;
 }
 .agreement-checkbox-icon {
 }
